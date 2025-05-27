@@ -9,10 +9,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"github.com/nilsonmart/file_delete_tasker/internal/models" // Adjust the import path as necessary
 )
 
-// DirectoryValidator handles directory validation logic
-type DirectoryValidator struct{}
+
 
 func (dv *DirectoryValidator) Validate(dirPath string) (string, error) {
 	for {
@@ -27,10 +27,6 @@ func (dv *DirectoryValidator) Validate(dirPath string) (string, error) {
 	}
 }
 
-// FileDeleter handles file deletion logic
-type FileDeleter struct {
-	Extension string
-}
 
 func (fd *FileDeleter) DeleteFilesWithTimeout(dirPath string, files []os.DirEntry, workerCount, maxRetries int, timeout time.Duration) error {
 	type FileTask struct {
