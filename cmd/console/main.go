@@ -9,16 +9,15 @@ import (
 	"strings"
 	"sync"
 	"time"
-	// Adjust the import path as necessary
 )
 
-// DirectoryValidator handles directory validation logic
-type DirectoryValidator struct{}
+// // DirectoryValidator handles directory validation logic
+// type DirectoryValidator struct{}
 
-// FileDeleter handles file deletion logic
-type FileDeleter struct {
-	Extension string
-}
+// // FileDeleter handles file deletion logic
+// type FileDeleter struct {
+// 	Extension string
+// }
 
 func (dv *DirectoryValidator) Validate(dirPath string) (string, error) {
 	for {
